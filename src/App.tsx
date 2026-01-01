@@ -200,17 +200,23 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                With over a decade of experience in the plastering industry, SK Gypsum Plastering has established itself as a trusted name in delivering superior quality workmanship for residential and commercial projects.
-              </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Our team of certified professionals uses the finest materials and latest techniques to ensure every project meets the highest standards of quality and durability.
-              </p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                From simple repairs to complex architectural features, we approach each project with the same dedication to perfection and customer satisfaction.
-              </p>
-            </div>
+          <div>
+  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+    SK Gypsum Plastering offers professional gypsum plastering services for
+    residential and commercial projects.
+  </p>
+
+  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+    With over 10 years of experience, we focus on clean work, smooth finishing,
+    and quality materials.
+  </p>
+
+  <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+    Every project is completed on time with attention to detail and customer
+    satisfaction.
+  </p>
+</div>
+
             <div className="grid grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3 bg-neutral-50 p-4 rounded-lg">
