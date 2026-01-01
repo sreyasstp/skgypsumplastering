@@ -48,21 +48,21 @@ function App() {
 
   const testimonials = [
     {
-      name: 'David Richardson',
-      role: 'Homeowner',
-      text: 'Outstanding work on our home renovation. The team was professional, clean, and the finish quality is exceptional.',
+      name: 'Ramesh Kumar',
+      role: 'Home Owner, Palakkad',
+      text: 'Very neat work and good finishing. The team completed the work on time and maintained cleanliness.',
       rating: 5
     },
     {
-      name: 'Sarah Mitchell',
-      role: 'Property Developer',
-      text: 'We\'ve used SK Gypsum Plastering for multiple commercial projects. Always reliable and delivers perfect results.',
+      name: 'Suresh Menon',
+      role: 'Building Contractor',
+      text: 'Good quality gypsum plastering. Reliable team and professional approach. I recommend them.',
       rating: 5
     },
     {
-      name: 'James Cooper',
+      name: 'Anjali Nair',
       role: 'Interior Designer',
-      text: 'The attention to detail is remarkable. They bring our design visions to life with precision and craftsmanship.',
+      text: 'Excellent finishing and attention to detail. They clearly understood our requirements.',
       rating: 5
     }
   ];
@@ -168,7 +168,7 @@ function App() {
                   <div className="text-gray-600">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-[#8B5A5F]">500+</div>
+                  <div className="text-3xl font-bold text-[#8B5A5F]">50+</div>
                   <div className="text-gray-600">Projects Done</div>
                 </div>
                 <div>
@@ -274,9 +274,10 @@ function App() {
           </div>
         </div>
       </section>
-
       <section id="contact" className="py-20 bg-[#8B5A5F] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -285,100 +286,113 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
+
+            {/* LEFT: Contact Information */}
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+
               <div className="space-y-6">
+
+                {/* Phone */}
                 <div className="flex items-start space-x-4">
                   <Phone className="flex-shrink-0 mt-1" size={24} />
                   <div>
                     <div className="font-semibold text-lg">Phone</div>
-                    <div className="text-white/90">+1 (555) 123-4567</div>
-                    <div className="text-white/90">+1 (555) 987-6543</div>
+                    <div className="text-white/90">+91 99957 04774</div>
                   </div>
                 </div>
+
+                {/* Email */}
                 <div className="flex items-start space-x-4">
                   <Mail className="flex-shrink-0 mt-1" size={24} />
                   <div>
                     <div className="font-semibold text-lg">Email</div>
-                    <div className="text-white/90">info@skgypsumplastering.com</div>
-                    <div className="text-white/90">quotes@skgypsumplastering.com</div>
+                    <div className="text-white/90">skgypsumplastering@gmail.com</div>
                   </div>
                 </div>
+
+                {/* Address */}
                 <div className="flex items-start space-x-4">
                   <MapPin className="flex-shrink-0 mt-1" size={24} />
                   <div>
                     <div className="font-semibold text-lg">Address</div>
-                    <div className="text-white/90">123 Construction Avenue</div>
-                    <div className="text-white/90">Business District, City, State 12345</div>
+                    <div className="text-white/90">SK Gypsum Plastering</div>
+                    <div className="text-white/90">Venkatesa Garden</div>
+                    <div className="text-white/90">Near Prasannalakshmi Kalyana Mandapam</div>
+                    <div className="text-white/90">Palakkad – 678006</div>
                   </div>
                 </div>
+
+                {/* Business Hours */}
                 <div className="flex items-start space-x-4">
                   <Clock className="flex-shrink-0 mt-1" size={24} />
                   <div>
                     <div className="font-semibold text-lg">Business Hours</div>
-                    <div className="text-white/90">Monday - Friday: 7:00 AM - 6:00 PM</div>
-                    <div className="text-white/90">Saturday: 8:00 AM - 4:00 PM</div>
+                    <div className="text-white/90">Monday – Saturday: 10:00 AM – 6:00 PM</div>
                     <div className="text-white/90">Sunday: Closed</div>
                   </div>
                 </div>
+
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Request a Quote</h3>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#8B5A5F] focus:ring-2 focus:ring-[#8B5A5F]/20 outline-none transition-all text-gray-900"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#8B5A5F] focus:ring-2 focus:ring-[#8B5A5F]/20 outline-none transition-all text-gray-900"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Phone</label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#8B5A5F] focus:ring-2 focus:ring-[#8B5A5F]/20 outline-none transition-all text-gray-900"
-                    placeholder="+1 (555) 000-0000"
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Service Required</label>
-                  <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#8B5A5F] focus:ring-2 focus:ring-[#8B5A5F]/20 outline-none transition-all text-gray-900">
-                    <option>Select a service</option>
-                    <option>Residential Plastering</option>
-                    <option>Commercial Projects</option>
-                    <option>Ceiling Installation</option>
-                    <option>Wall Partitioning</option>
-                    <option>Decorative Finishes</option>
-                    <option>Repairs & Renovation</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Message</label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#8B5A5F] focus:ring-2 focus:ring-[#8B5A5F]/20 outline-none transition-all text-gray-900"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-[#8B5A5F] text-white px-8 py-4 rounded-lg hover:bg-[#73494D] transition-all font-semibold text-lg shadow-lg"
+            {/* RIGHT: CTA & Info */}
+            <div className="bg-white/10 rounded-xl p-10 border border-white/20">
+
+              <h3 className="text-3xl font-bold mb-6">
+                Why Choose SK Gypsum Plastering?
+              </h3>
+
+              <ul className="space-y-4 text-lg">
+                <li className="flex items-start gap-3">
+                  <span>✔</span>
+                  High-quality gypsum plaster with smooth finishing
+                </li>
+                <li className="flex items-start gap-3">
+                  <span>✔</span>
+                  Experienced team with 10+ years of work
+                </li>
+                <li className="flex items-start gap-3">
+                  <span>✔</span>
+                  On-time completion and clean work site
+                </li>
+                <li className="flex items-start gap-3">
+                  <span>✔</span>
+                  Affordable pricing with honest quotes
+                </li>
+                <li className="flex items-start gap-3">
+                  <span>✔</span>
+                  Residential and commercial projects handled
+                </li>
+              </ul>
+
+              <div className="mt-8">
+                <h4 className="text-xl font-semibold mb-2">Service Areas</h4>
+                <p className="text-white/90">
+                  Palakkad • Ottapalam • Mannarkkad • Alathur • Nearby Areas
+                </p>
+              </div>
+
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <a
+                  href="tel:+919995704774"
+                  className="bg-white text-[#8B5A5F] text-center px-6 py-4 rounded-lg font-semibold hover:bg-gray-100 transition"
                 >
-                  Send Message
-                </button>
-              </form>
+                  📞 Call Now
+                </a>
+
+                <a
+                  href="https://wa.me/919995704774?text=Hi%20SK%20Gypsum%20Plastering,%20I%20would%20like%20a%20quote"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 text-white text-center px-6 py-4 rounded-lg font-semibold hover:bg-green-600 transition"
+                >
+                  WhatsApp Us
+                </a>
+              </div>
+
             </div>
+
           </div>
         </div>
       </section>
@@ -390,12 +404,19 @@ function App() {
               <img
                 src="/logo_convertes.png"
                 alt="SK Gypsum Plastering"
-                className="h-16 w-auto mb-4 brightness-0 invert"
+                className="h-16 w-auto mb-4"
               />
               <p className="text-gray-400 leading-relaxed">
-                Your trusted partner for professional gypsum plastering services. Quality workmanship, reliable service, exceptional results.
+                SK Gypsum Plastering<br />
+                Venkatesa Garden, Near Prasannalakshmi Kalyana Mandapam<br />
+                Palakkad – 678006
+              </p>
+              <p className="text-gray-400 mt-2">
+                📞 +91 99957 04774<br />
+                ✉️ skgypsumplastering@gmail.com
               </p>
             </div>
+
             <div>
               <h4 className="font-bold text-lg mb-4">Quick Links</h4>
               <div className="space-y-2">
