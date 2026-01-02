@@ -17,7 +17,7 @@ export default function About() {
             About Us
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Industry leaders in professional plastering services with a commitment to excellence
+            Industry leaders in professional plastering services with experienced and skilled labour
           </p>
         </div>
 
@@ -29,18 +29,19 @@ export default function About() {
               <span className="font-semibold text-gray-900">
                 SK Gypsum Plastering
               </span>{' '}
-              delivers professional gypsum plastering services for both residential
-              and commercial projects.
+              delivers professional gypsum plastering services for residential and
+              commercial projects, backed by experienced and skilled labour.
             </p>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               With over <span className="font-semibold">10+ years of experience</span>,
-              we are known for clean execution, smooth finishes, and premium materials.
+              our team of skilled labourers is known for clean execution, smooth finishes,
+              and the use of premium materials.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Every project is completed on time with careful attention to detail and
-              complete customer satisfaction.
+              Every project is handled by experienced professionals and skilled labour,
+              ensuring timely completion, attention to detail, and complete customer satisfaction.
             </p>
           </div>
 

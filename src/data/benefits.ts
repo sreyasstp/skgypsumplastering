@@ -1,9 +1,8 @@
 export const benefits = [
-    'Certified & Licensed Professionals',
-    'High-Quality Materials',
-    '10+ Years of Experience',
-    'On-Time Project Completion',
-    'Competitive Pricing',
-    'Free Consultations & Quotes'
-  ];
-  
+  'Experienced & Skilled Labour',
+  'High-Quality Materials',
+  '10+ Years of Industry Experience',
+  'On-Time Project Completion',
+  'Competitive Pricing',
+  'Free Consultations & Quotes',
+];
