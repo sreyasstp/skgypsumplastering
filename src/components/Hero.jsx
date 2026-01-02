@@ -13,7 +13,7 @@ function AnimatedBackground() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % bgImages.length);
-    }, 7000); // slow & classy
+    }, 7000);
 
     return () => clearInterval(interval);
   }, []);
@@ -44,12 +44,13 @@ export default function Hero() {
       {/* MOTION BACKGROUND */}
       <AnimatedBackground />
 
-      <div className="absolute inset-0 bg-white/65" />
-<div className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/65 to-white/55" />
+      {/* OVERLAYS */}
+      <div className="absolute inset-0 bg-white/65 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/65 to-white/55 pointer-events-none" />
 
       {/* CONTENT */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
-        <div className="grid md:grid-cols-2 gap-20 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
           {/* LEFT */}
           <div>
@@ -63,12 +64,13 @@ export default function Hero() {
               clean workmanship and lasting quality.
             </p>
 
-            <div className="flex gap-5">
-              <button className="bg-[#8B5A5F] text-white px-9 py-4 rounded-xl font-semibold shadow-lg hover:bg-[#73494D] transition">
+            {/* BUTTONS – FIXED */}
+            <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+              <button className="w-full sm:w-auto bg-[#8B5A5F] text-white px-9 py-4 rounded-xl font-semibold shadow-lg hover:bg-[#73494D] transition">
                 Get Free Quote
               </button>
 
-              <button className="px-9 py-4 rounded-xl border border-[#8B5A5F] text-[#8B5A5F] font-semibold hover:bg-[#8B5A5F] hover:text-white transition">
+              <button className="w-full sm:w-auto px-9 py-4 rounded-xl border border-[#8B5A5F] text-[#8B5A5F] font-semibold hover:bg-[#8B5A5F] hover:text-white transition">
                 Our Services
               </button>
             </div>
