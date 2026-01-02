@@ -3,21 +3,33 @@ import { testimonials } from '../data/testimonials';
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-        {testimonials.map((t, i) => (
-          <div key={i} className="card">
-            <div className="flex mb-3">
-              {[...Array(t.rating)].map((_, j) => (
-                <Star key={j} className="text-yellow-500 fill-current" />
+  
+    <section id="testimonials" className="py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Don't just take our word for it - hear from our satisfied customers
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="bg-neutral-50 rounded-xl p-8 shadow-md">
+            <div className="flex mb-4">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <Star key={i} className="text-yellow-500 fill-current" size={20} />
               ))}
             </div>
-            <p>"{t.text}"</p>
-            <strong>{t.name}</strong>
-            <span className="text-sm">{t.role}</span>
+            <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
+            <div>
+              <div className="font-bold text-gray-900">{testimonial.name}</div>
+              <div className="text-gray-600 text-sm">{testimonial.role}</div>
+            </div>
           </div>
         ))}
       </div>
-    </section>
+    </div>
+  </section>
   );
 }
