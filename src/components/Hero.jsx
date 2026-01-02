@@ -19,7 +19,7 @@ function AnimatedBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       {bgImages.map((img, i) => (
         <div
           key={i}
@@ -35,21 +35,21 @@ function AnimatedBackground() {
   );
 }
 
-export default function Hero() {
+export default function Hero({ scrollToSection }) {
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* MOTION BACKGROUND */}
+      {/* BACKGROUND */}
       <AnimatedBackground />
 
       {/* OVERLAYS */}
-      <div className="absolute inset-0 bg-white/65 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/65 to-white/55 pointer-events-none" />
+      <div className="absolute inset-0 z-10 bg-white/65 pointer-events-none" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-white/75 via-white/65 to-white/55 pointer-events-none" />
 
       {/* CONTENT */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24 sm:pt-28 sm:pb-28">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24 sm:pt-28 sm:pb-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
           {/* LEFT */}
@@ -64,19 +64,25 @@ export default function Hero() {
               clean workmanship and lasting quality.
             </p>
 
-            {/* BUTTONS – FIXED */}
+            {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
-              <button className="w-full sm:w-auto bg-[#8B5A5F] text-white px-9 py-4 rounded-xl font-semibold shadow-lg hover:bg-[#73494D] transition">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="w-full sm:w-auto bg-[#8B5A5F] text-white px-9 py-4 rounded-xl font-semibold shadow-lg hover:bg-[#73494D] transition"
+              >
                 Get Free Quote
               </button>
 
-              <button className="w-full sm:w-auto px-9 py-4 rounded-xl border border-[#8B5A5F] text-[#8B5A5F] font-semibold hover:bg-[#8B5A5F] hover:text-white transition">
+              <button
+                onClick={() => scrollToSection('services')}
+                className="w-full sm:w-auto px-9 py-4 rounded-xl border border-[#8B5A5F] text-[#8B5A5F] font-semibold hover:bg-[#8B5A5F] hover:text-white transition"
+              >
                 Our Services
               </button>
             </div>
           </div>
 
-          {/* RIGHT – LOGO */}
+          {/* RIGHT */}
           <div className="relative">
             <img
               src="/logo_convertes.png"

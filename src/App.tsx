@@ -32,7 +32,7 @@ function App() {
       />
 
       {/* Sections */}
-      <Hero />
+      <Hero scrollToSection={scrollToSection} />
       <About />
       <Services />
       <Gallery />
