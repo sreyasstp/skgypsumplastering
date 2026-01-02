@@ -1,81 +1,90 @@
-export default function Hero({ scroll }) {
-    return (
-        <section
-        id="home"
-        className="pt-20 relative overflow-hidden"
-      >
-        {/* Background Image */}
+import { useEffect, useState } from 'react';
+
+/* Background images */
+const bgImages = [
+  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
+  'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=2000&q=80',
+  'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=2000&q=80',
+];
+
+function AnimatedBackground() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % bgImages.length);
+    }, 7000); // slow & classy
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {bgImages.map((img, i) => (
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1581093458791-9f3c3900df3c?auto=format&fit=crop&w=1600&q=80')",
-          }}
+          key={i}
+          className={`absolute inset-0 bg-cover bg-center
+            transition-opacity transition-transform
+            duration-[2500ms] ease-in-out
+            ${i === index ? 'opacity-100 scale-105' : 'opacity-0 scale-100'}
+          `}
+          style={{ backgroundImage: `url(${img})` }}
         />
+      ))}
+    </div>
+  );
+}
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#E5D5D0]/95 via-white/90 to-white/80" />
+export default function Hero() {
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
+      {/* MOTION BACKGROUND */}
+      <AnimatedBackground />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="grid md:grid-cols-2 gap-14 items-center">
+      <div className="absolute inset-0 bg-white/65" />
+<div className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/65 to-white/55" />
 
-            {/* LEFT */}
-            <div className="animate-fadeInUp">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                The Ultimate<br />Plastering Solution
-              </h1>
+      {/* CONTENT */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
+        <div className="grid md:grid-cols-2 gap-20 items-center">
 
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed max-w-xl">
-                Professional gypsum plastering for homes and commercial spaces with
-                smooth finishing and long-lasting quality.
-              </p>
+          {/* LEFT */}
+          <div>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Smooth Walls.<br />
+              <span className="text-[#8B5A5F]">Perfect Finish.</span>
+            </h1>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="bg-[#8B5A5F] text-white px-8 py-4 rounded-lg hover:bg-[#73494D] transition transform hover:scale-105 font-semibold shadow-lg"
-                >
-                  Get Free Quote
-                </button>
+            <p className="text-xl text-gray-700 max-w-xl mb-10 leading-relaxed">
+              Premium gypsum plastering for homes and commercial spaces with
+              clean workmanship and lasting quality.
+            </p>
 
-                <button
-                  onClick={() => scrollToSection('services')}
-                  className="border-2 border-[#8B5A5F] text-[#8B5A5F] px-8 py-4 rounded-lg hover:bg-[#8B5A5F] hover:text-white transition font-semibold"
-                >
-                  Our Services
-                </button>
-              </div>
+            <div className="flex gap-5">
+              <button className="bg-[#8B5A5F] text-white px-9 py-4 rounded-xl font-semibold shadow-lg hover:bg-[#73494D] transition">
+                Get Free Quote
+              </button>
 
-              <div className="mt-12 grid grid-cols-3 gap-6">
-                {[
-                  { value: '10+', label: 'Years Experience' },
-                  { value: '50+', label: 'Projects Done' },
-                  { value: '100%', label: 'Satisfaction' },
-                ].map((item, i) => (
-                  <div key={i}>
-                    <div className="text-3xl font-bold text-[#8B5A5F]">
-                      {item.value}
-                    </div>
-                    <div className="text-gray-600">{item.label}</div>
-                  </div>
-                ))}
-              </div>
+              <button className="px-9 py-4 rounded-xl border border-[#8B5A5F] text-[#8B5A5F] font-semibold hover:bg-[#8B5A5F] hover:text-white transition">
+                Our Services
+              </button>
             </div>
-
-            {/* RIGHT */}
-            <div className="relative animate-fadeInRight">
-              <div className="bg-[#8B5A5F] rounded-2xl shadow-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform">
-                <img
-                  src="/logo_convertes.png"
-                  alt="SK Gypsum Plastering"
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-
           </div>
+
+          {/* RIGHT – LOGO */}
+          <div className="relative">
+            <img
+              src="/logo_convertes.png"
+              alt="SK Gypsum Plastering"
+              className="w-full h-auto drop-shadow-2xl"
+            />
+          </div>
+
         </div>
-      </section>
-    );
-  }
-  
+      </div>
+    </section>
+  );
+}
