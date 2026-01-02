@@ -49,7 +49,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/65 to-white/55 pointer-events-none" />
 
       {/* CONTENT */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24 sm:pt-28 sm:pb-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
           {/* LEFT */}
