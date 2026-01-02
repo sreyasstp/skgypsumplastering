@@ -3,39 +3,39 @@ import useScrollAnimation from '../utils/useScrollAnimation';
 const galleryImages = [
   {
     src: '/1.jpg',
-    title: 'Living Room Gypsum Finish',
+    title: '',
   },
   {
     src: '/2.jpg',
-    title: 'Bedroom Ceiling Design',
+    title: '',
   },
   {
     src: '/3.jpg',
-    title: 'Commercial Office Plastering',
+    title: '',
   },
   {
     src: '/4.jpg',
-    title: 'Modern False Ceiling',
+    title: '',
   },
   {
     src: '/5.jpg',
-    title: 'Smooth Wall Finish',
+    title: '',
   },
   {
     src: '/6.jpg',
-    title: 'Interior Renovation',
+    title: '',
   },
   {
-    src: '/7.png',
-    title: 'Test',
+    src: '/7.jpg',
+    title: '',
   },
   {
-    src: '/8.png',
-    title: 'Test',
+    src: '/8.jpg',
+    title: '',
   },
   {
-    src: '/9.png',
-    title: 'Test',
+    src: '/9.jpg',
+    title: '',
   },
 ];
 
