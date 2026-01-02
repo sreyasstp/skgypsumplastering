@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { services } from './data/services';
 import { benefits } from './data/benefits';
 import { testimonials } from './data/testimonials';
-
+import Footer from './components/Footer';
+import Contact from './components/Contact'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -247,128 +248,8 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="contact" className="py-20 bg-[#8B5A5F] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Ready to start your project? Contact us today for a free consultation and quote
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-
-            {/* LEFT: Contact Information */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-
-              <div className="space-y-6">
-
-                {/* Phone */}
-                <div className="flex items-start space-x-4">
-                  <Phone className="flex-shrink-0 mt-1" size={24} />
-                  <div>
-                    <div className="font-semibold text-lg">Phone</div>
-                    <div className="text-white/90">+91 99957 04774</div>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex items-start space-x-4">
-                  <Mail className="flex-shrink-0 mt-1" size={24} />
-                  <div>
-                    <div className="font-semibold text-lg">Email</div>
-                    <div className="text-white/90">skgypsumplastering@gmail.com</div>
-                  </div>
-                </div>
-
-                {/* Address */}
-                <div className="flex items-start space-x-4">
-                  <MapPin className="flex-shrink-0 mt-1" size={24} />
-                  <div>
-                    <div className="font-semibold text-lg">Address</div>
-                    <div className="text-white/90">SK Gypsum Plastering</div>
-                    <div className="text-white/90">Venkatesa Garden</div>
-                    <div className="text-white/90">Near Prasannalakshmi Kalyana Mandapam</div>
-                    <div className="text-white/90">Palakkad – 678006</div>
-                  </div>
-                </div>
-
-                {/* Business Hours */}
-                <div className="flex items-start space-x-4">
-                  <Clock className="flex-shrink-0 mt-1" size={24} />
-                  <div>
-                    <div className="font-semibold text-lg">Business Hours</div>
-                    <div className="text-white/90">Monday – Saturday: 10:00 AM – 6:00 PM</div>
-                    <div className="text-white/90">Sunday: Closed</div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            {/* RIGHT: CTA & Info */}
-            <div className="bg-white/10 rounded-xl p-10 border border-white/20">
-
-              <h3 className="text-3xl font-bold mb-6">
-                Why Choose SK Gypsum Plastering?
-              </h3>
-
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-start gap-3">
-                  <span>✔</span>
-                  High-quality gypsum plaster with smooth finishing
-                </li>
-                <li className="flex items-start gap-3">
-                  <span>✔</span>
-                  Experienced team with 10+ years of work
-                </li>
-                <li className="flex items-start gap-3">
-                  <span>✔</span>
-                  On-time completion and clean work site
-                </li>
-                <li className="flex items-start gap-3">
-                  <span>✔</span>
-                  Affordable pricing with honest quotes
-                </li>
-                <li className="flex items-start gap-3">
-                  <span>✔</span>
-                  Residential and commercial projects handled
-                </li>
-              </ul>
-
-              <div className="mt-8">
-                <h4 className="text-xl font-semibold mb-2">Service Areas</h4>
-                <p className="text-white/90">
-                  Palakkad • Ottapalam • Mannarkkad • Alathur • Nearby Areas
-                </p>
-              </div>
-
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <a
-                  href="tel:+919995704774"
-                  className="bg-white text-[#8B5A5F] text-center px-6 py-4 rounded-lg font-semibold hover:bg-gray-100 transition"
-                >
-                  📞 Call Now
-                </a>
-
-                <a
-                  href="https://wa.me/919995704774?text=Hi%20SK%20Gypsum%20Plastering,%20I%20would%20like%20a%20quote"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-500 text-white text-center px-6 py-4 rounded-lg font-semibold hover:bg-green-600 transition"
-                >
-                  WhatsApp Us
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </section>
+   
+   <Contact/>
       <a
   href="https://wa.me/919995704774?text=Hi%20SK%20Gypsum%20Plastering,%20I%20would%20like%20to%20know%20more%20about%20your%20services"
   target="_blank"
@@ -386,58 +267,7 @@ function App() {
   </svg>
 </a>
 
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div className="md:col-span-2">
-              <img
-                src="/logo_convertes.png"
-                alt="SK Gypsum Plastering"
-                className="h-16 w-auto mb-4"
-              />
-              <p className="text-gray-400 leading-relaxed">
-                SK Gypsum Plastering<br />
-                Venkatesa Garden, Near Prasannalakshmi Kalyana Mandapam<br />
-                Palakkad – 678006
-              </p>
-              <p className="text-gray-400 mt-2">
-                📞 +91 99957 04774<br />
-                ✉️ skgypsumplastering@gmail.com
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-4">Quick Links</h4>
-              <div className="space-y-2">
-                <button onClick={() => scrollToSection('home')} className="block text-gray-400 hover:text-white transition-colors">
-                  Home
-                </button>
-                <button onClick={() => scrollToSection('about')} className="block text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </button>
-                <button onClick={() => scrollToSection('services')} className="block text-gray-400 hover:text-white transition-colors">
-                  Services
-                </button>
-                <button onClick={() => scrollToSection('contact')} className="block text-gray-400 hover:text-white transition-colors">
-                  Contact
-                </button>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-4">Services</h4>
-              <div className="space-y-2 text-gray-400">
-                <div>Residential Plastering</div>
-                <div>Commercial Projects</div>
-                <div>Ceiling Installation</div>
-                <div>Wall Partitioning</div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2026 SK Gypsum Plastering. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+<Footer/>
     </div>
   );
 }
