@@ -2,28 +2,40 @@ import useScrollAnimation from '../utils/useScrollAnimation';
 
 const galleryImages = [
   {
-    src: '/logo_convertes.png',
+    src: '/16.jpg',
     title: 'Living Room Gypsum Finish',
   },
   {
-    src: '/logo_convertes.png',
+    src: '/25.jpg',
     title: 'Bedroom Ceiling Design',
   },
   {
-    src: '/logo_convertes.png',
+    src: '/27.jpg',
     title: 'Commercial Office Plastering',
   },
   {
-    src: '/logo_convertes.png',
+    src: '/39.jpg',
     title: 'Modern False Ceiling',
   },
   {
-    src: '/logo_convertes.png',
+    src: '/40.jpg',
     title: 'Smooth Wall Finish',
   },
   {
-    src: '/logo_convertes.png',
+    src: '/29.jpg',
     title: 'Interior Renovation',
+  },
+  {
+    src: '/logo_convertes.png',
+    title: 'Test',
+  },
+  {
+    src: '/logo_convertes.png',
+    title: 'Test',
+  },
+  {
+    src: '/logo_convertes.png',
+    title: 'Test',
   },
 ];
 
