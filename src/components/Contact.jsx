@@ -104,7 +104,7 @@ export default function Contact() {
               <div className="mt-10">
                 <h4 className="text-xl font-semibold mb-2">Service Areas</h4>
                 <p className="text-white/90">
-                  Palakkad • Ottapalam • Mannarkkad • Alathur • Nearby Areas
+                  Palakkad • Malappuram • Thrissur • Nearby Areas
                 </p>
               </div>
             </div>

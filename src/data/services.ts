@@ -6,14 +6,14 @@ export const services = [
     },
     {
       title: 'Commercial Projects',
-      description: 'Large-scale plastering solutions for offices, retail spaces, and commercial buildings.',
+      description: 'Small & Large-scale plastering solutions for offices, retail spaces, and commercial buildings.',
       icon: '🏢'
     },
     {
-      title: 'Ceiling Installation',
-      description: 'Professional gypsum ceiling installation with various designs and finishes.',
+      title: 'Gypsum False Ceilings',
+      description: 'Expert gypsum false ceiling solutions with modern designs, smooth finishes, and long-lasting durability.',
       icon: '⬜'
-    },
+    },    
     {
       title: 'Wall Partitioning',
       description: 'Durable and efficient gypsum board partitions for space optimization.',

@@ -17,7 +17,7 @@ export default function About() {
             About Us
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Industry leaders in professional plastering services with experienced and skilled labour
+            Industry leaders in professional gypsum plastering services with experienced and skilled labour
           </p>
         </div>
 
