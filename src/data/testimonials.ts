@@ -3,7 +3,7 @@ export const testimonials = [
       name: 'Ramesh Kumar',
       role: 'Home Owner, Palakkad',
       text: 'Very good work and neat finishing. The team completed the work on time and kept the place clean.',
-      rating: 5
+      rating: 4
     },
     {
       name: 'Suresh Menon',

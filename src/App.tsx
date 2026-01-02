@@ -1,71 +1,13 @@
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { services } from './data/services';
+import { benefits } from './data/benefits';
+import { testimonials } from './data/testimonials';
+
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const services = [
-    {
-      title: 'Residential Plastering',
-      description: 'Expert plastering services for homes, including walls, ceilings, and architectural features.',
-      icon: '🏠'
-    },
-    {
-      title: 'Commercial Projects',
-      description: 'Large-scale plastering solutions for offices, retail spaces, and commercial buildings.',
-      icon: '🏢'
-    },
-    {
-      title: 'Ceiling Installation',
-      description: 'Professional gypsum ceiling installation with various designs and finishes.',
-      icon: '⬜'
-    },
-    {
-      title: 'Wall Partitioning',
-      description: 'Durable and efficient gypsum board partitions for space optimization.',
-      icon: '🧱'
-    },
-    {
-      title: 'Decorative Finishes',
-      description: 'Custom textures, moldings, and ornamental plaster work for elegant interiors.',
-      icon: '✨'
-    },
-    {
-      title: 'Repairs & Renovation',
-      description: 'Expert repair services for damaged plaster, cracks, and restoration work.',
-      icon: '🔧'
-    }
-  ];
-
-  const benefits = [
-    'Certified & Licensed Professionals',
-    'High-Quality Materials',
-    '10+ Years of Experience',
-    'On-Time Project Completion',
-    'Competitive Pricing',
-    'Free Consultations & Quotes'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Ramesh Kumar',
-      role: 'Home Owner, Palakkad',
-      text: 'Very neat work and good finishing. The team completed the work on time and maintained cleanliness.',
-      rating: 5
-    },
-    {
-      name: 'Suresh Menon',
-      role: 'Building Contractor',
-      text: 'Good quality gypsum plastering. Reliable team and professional approach. I recommend them.',
-      rating: 5
-    },
-    {
-      name: 'Anjali Nair',
-      role: 'Interior Designer',
-      text: 'Excellent finishing and attention to detail. They clearly understood our requirements.',
-      rating: 5
-    }
-  ];
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -137,63 +79,88 @@ function App() {
           </div>
         )}
       </nav>
+      <section
+  id="home"
+  className="pt-20 relative overflow-hidden"
+>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url('https://images.unsplash.com/photo-1581093458791-9f3c3900df3c?auto=format&fit=crop&w=1600&q=80')",
+    }}
+  />
 
-      <section id="home" className="pt-20 bg-gradient-to-br from-[#E5D5D0] via-white to-neutral-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                The Ultimate Plastering Solution
-              </h1>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Transform your spaces with expert gypsum plastering services. We deliver precision, quality, and craftsmanship in every project.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="bg-[#8B5A5F] text-white px-8 py-4 rounded-lg hover:bg-[#73494D] transition-all transform hover:scale-105 font-semibold text-lg shadow-lg"
-                >
-                  Get Free Quote
-                </button>
-                <button
-                  onClick={() => scrollToSection('services')}
-                  className="border-2 border-[#8B5A5F] text-[#8B5A5F] px-8 py-4 rounded-lg hover:bg-[#8B5A5F] hover:text-white transition-all font-semibold text-lg"
-                >
-                  Our Services
-                </button>
-              </div>
-              <div className="mt-12 grid grid-cols-3 gap-6">
-                <div>
-                  <div className="text-3xl font-bold text-[#8B5A5F]">10+</div>
-                  <div className="text-gray-600">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-[#8B5A5F]">50+</div>
-                  <div className="text-gray-600">Projects Done</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-[#8B5A5F]">100%</div>
-                  <div className="text-gray-600">Satisfaction</div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-[#8B5A5F] rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform">
-                <img
-                  src="/logo_convertes.png"
-                  alt="SK Gypsum Plastering"
-                  className="w-full h-auto transform -rotate-3"
-                />
-              </div>
-            </div>
-          </div>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-br from-[#E5D5D0]/95 via-white/90 to-white/80" />
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <div className="grid md:grid-cols-2 gap-14 items-center">
+
+      {/* LEFT */}
+      <div className="animate-fadeInUp">
+        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          The Ultimate<br />Plastering Solution
+        </h1>
+
+        <p className="text-xl text-gray-700 mb-8 leading-relaxed max-w-xl">
+          Professional gypsum plastering for homes and commercial spaces with
+          smooth finishing and long-lasting quality.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="bg-[#8B5A5F] text-white px-8 py-4 rounded-lg hover:bg-[#73494D] transition transform hover:scale-105 font-semibold shadow-lg"
+          >
+            Get Free Quote
+          </button>
+
+          <button
+            onClick={() => scrollToSection('services')}
+            className="border-2 border-[#8B5A5F] text-[#8B5A5F] px-8 py-4 rounded-lg hover:bg-[#8B5A5F] hover:text-white transition font-semibold"
+          >
+            Our Services
+          </button>
         </div>
-      </section>
+
+        <div className="mt-12 grid grid-cols-3 gap-6">
+          {[
+            { value: '10+', label: 'Years Experience' },
+            { value: '50+', label: 'Projects Done' },
+            { value: '100%', label: 'Satisfaction' },
+          ].map((item, i) => (
+            <div key={i}>
+              <div className="text-3xl font-bold text-[#8B5A5F]">
+                {item.value}
+              </div>
+              <div className="text-gray-600">{item.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* RIGHT */}
+      <div className="relative animate-fadeInRight">
+        <div className="bg-[#8B5A5F] rounded-2xl shadow-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform">
+          <img
+            src="/logo_convertes.png"
+            alt="SK Gypsum Plastering"
+            className="w-full h-auto"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About SK Gypsum Plastering</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About Us</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Industry leaders in professional plastering services with a commitment to excellence
             </p>
