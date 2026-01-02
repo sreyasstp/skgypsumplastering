@@ -37,6 +37,18 @@ const galleryImages = [
     src: '/9.jpg',
     title: '',
   },
+  {
+    src: '/10.jpg',
+    title: '',
+  },
+  {
+    src: '/11.jpg',
+    title: '',
+  },
+  {
+    src: '/12.jpg',
+    title: '',
+  },
 ];
 
 export default function Gallery() {
