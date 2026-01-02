@@ -1,7 +1,10 @@
 import { CheckCircle } from 'lucide-react';
 import { benefits } from '../data/benefits';
+import useScrollAnimation from '../utils/useScrollAnimation';
 
 export default function About() {
+    const ref = useScrollAnimation();
+
   return (
     <section id="about" className="py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

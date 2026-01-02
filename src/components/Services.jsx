@@ -1,6 +1,9 @@
 import { services } from '../data/services';
+import useScrollAnimation from '../utils/useScrollAnimation';
 
 export default function Services() {
+    const ref = useScrollAnimation();
+
   return (
     <section id="services" className="py-20 bg-gradient-to-br from-neutral-50 to-[#E5D5D0]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
