@@ -6,9 +6,13 @@ export default function About() {
   const leftRef = useScrollAnimation();
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-white to-neutral-50">
+    <section
+      id="about"
+      className="py-20 sm:py-24 bg-gradient-to-b from-white to-neutral-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        {/* HEADER */}
+        <div className="text-center mb-16 sm:mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About Us
           </h2>
@@ -17,7 +21,8 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-14 items-center">
+        {/* CONTENT */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
           {/* LEFT CONTENT */}
           <div ref={leftRef} className="animate-left">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -40,7 +45,7 @@ export default function About() {
           </div>
 
           {/* RIGHT BENEFITS */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => {
               const ref = useScrollAnimation(index * 120);
 
