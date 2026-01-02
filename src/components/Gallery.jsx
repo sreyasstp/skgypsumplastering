@@ -2,7 +2,7 @@ import useScrollAnimation from '../utils/useScrollAnimation';
 
 const galleryImages = [
   {
-    src: '/1.jpg',
+    src: '/11.jpg',
     title: '',
   },
   {
@@ -18,7 +18,7 @@ const galleryImages = [
     title: '',
   },
   {
-    src: '/5.jpg',
+    src: '/10.jpg',
     title: '',
   },
   {
@@ -30,23 +30,23 @@ const galleryImages = [
     title: '',
   },
   {
+    src: '/5.jpg',
+    title: '',
+  },
+  {
+    src: '/12.jpg',
+    title: '',
+  },
+  {
+    src: '/1.jpg',
+    title: '',
+  },
+  {
     src: '/8.jpg',
     title: '',
   },
   {
     src: '/9.jpg',
-    title: '',
-  },
-  {
-    src: '/10.jpg',
-    title: '',
-  },
-  {
-    src: '/11.jpg',
-    title: '',
-  },
-  {
-    src: '/12.jpg',
     title: '',
   },
 ];
