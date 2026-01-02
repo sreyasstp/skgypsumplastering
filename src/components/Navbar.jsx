@@ -1,6 +1,8 @@
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar({ isMenuOpen, setIsMenuOpen, scrollToSection }) {
+  const menuItems = ['home', 'about', 'services', 'gallery', 'testimonials'];
+
   return (
     <nav className="fixed top-0 w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +19,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, scrollToSection }) {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {['home', 'about', 'services', 'testimonials'].map((item) => (
+            {menuItems.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -49,7 +51,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, scrollToSection }) {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="px-4 py-4 space-y-3">
-            {['home', 'about', 'services', 'testimonials'].map((item) => (
+            {menuItems.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}

@@ -7,6 +7,8 @@ import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Gallery from './components/Gallery';
+
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +35,7 @@ function App() {
       <Hero />
       <About />
       <Services />
+      <Gallery />
       <Testimonials />
       <Contact />
 
