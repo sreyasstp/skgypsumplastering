@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 
 /* Background images */
 const bgImages = [
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
-  'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=2000&q=80',
-  'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=2000&q=80',
+    'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=2000&q=80',
+    'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=2000&q=80',
 ];
 
 function AnimatedBackground() {
@@ -55,14 +54,16 @@ export default function Hero({ scrollToSection }) {
           {/* LEFT */}
           <div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Smooth Walls.<br />
-              <span className="text-[#8B5A5F]">Perfect Finish.</span>
+              The Ultimate<br />
+              <span className="text-[#8B5A5F]">Plastering Solution.</span>
             </h1>
 
             <p className="text-xl text-gray-700 max-w-xl mb-10 leading-relaxed">
-              Premium gypsum plastering for homes and commercial spaces with
-              clean workmanship and lasting quality.
+            Our gypsum plastering services combine skilled workmanship, premium materials,
+            and attention to detail to create smooth, elegant surfaces for homes and
+            commercial interiors.
             </p>
+
 
             {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
