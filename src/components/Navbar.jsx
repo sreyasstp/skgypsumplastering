@@ -11,7 +11,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, scrollToSection }) {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/logo_convertes.png"
+              src="/log.png"
               alt="SK Gypsum Plastering"
               className="h-14 w-auto"
             />
